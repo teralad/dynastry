@@ -1,6 +1,3 @@
-# dynastry
-A way to live beyond time.
-
 # Dynastry: A Tree-mendous Family Tree Adventure
 ### Project Description:
 
