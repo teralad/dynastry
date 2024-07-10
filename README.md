@@ -34,4 +34,20 @@ At Dynastry, our mission is to help families dig up their roots and sow the seed
 <br>
 <br>
 
+## Contribution:
+
+*We follow all the work done in dynastry in [notion](https://www.notion.so/Dynastry-6926911cc5db423596052fa88a5c03a4). Raise an issue in github or ask for an invite in discord if you are interested.*
+
+#### Guidelines
+- Code Quality: Ensure your code is well-documented and follows the project's coding standards.
+- Testing: Include unit tests for any new features or bug fixes. Make sure all tests pass before submitting your pull request.
+- Documentation: Update the documentation as needed to reflect your changes, including any new instructions, functions, or features.
+
+#### Reporting Issues
+If you find a bug or have a feature request, please create an issue on the GitHub repository. Provide as much detail as possible to help us understand and address the issue.
+
+#### Community
+Join the conversation by participating in discussions and providing feedback on issues and pull requests. We value and appreciate your input!
+
+
 ### P.S : I did it to live through time.
