@@ -89,6 +89,7 @@
 - Frontend framework for creating user interfaces.
 
 ### 1.8 Risks and Assumptions 
+
 #### 1.8.1 Risks
 - Potential performance issues with a large number of nodes and relationships
 - Data privacy concerns. 
