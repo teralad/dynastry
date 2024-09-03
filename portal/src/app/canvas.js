@@ -1,6 +1,6 @@
 "use client";
 import * as d3 from "d3";
-import data from "@/../public/data/data.json";
+import data from "@/../public/data/relations.json";
 
 import { useRef, useEffect } from "react";
 
@@ -23,10 +23,16 @@ export default function Graph() {
 		// Create a simulation with several forces.
 		const simulation = d3
 			.forceSimulation(nodes)
-			.force("link", d3.forceLink(links).id((d) => d.id).distance(200))
+			.force(
+				"link",
+				d3
+					.forceLink(links)
+					.id((d) => d.id)
+					.distance(200)
+			)
 			.force("charge", d3.forceManyBody().strength(-100))
 			.force("x", d3.forceX())
-			.force("y", d3.forceY())
+			.force("y", d3.forceY());
 
 		// Create the SVG container.
 		const svg = d3
@@ -34,7 +40,7 @@ export default function Graph() {
 			.append("svg")
 			.attr("width", width)
 			.attr("height", height)
-			.attr("viewBox", [-window.screen.width/2, -window.screen.height/2, window.screen.width, window.screen.height])
+			.attr("viewBox", [-window.screen.width / 2, -window.screen.height / 2, window.screen.width, window.screen.height])
 			.attr("style", "max-width: 100%; max-height: 100%; border: 1px solid white;");
 
 		// Add a line for each link, and a circle for each node.
@@ -53,11 +59,24 @@ export default function Graph() {
 			.attr("stroke-width", 1.5)
 			.selectAll("circle")
 			.data(nodes)
-			.join("circle")
-			.attr("r", 20)
+			.join("g")
+			.append("circle")
+			.attr("r", 30)
+			.attr("style", "width: 100%; height: auto; font: 10px sans-serif;")
 			.attr("fill", (d) => color(d.group));
 
-		node.append("title").text((d) => d.id);
+		const text = svg
+			.selectChildren("g")
+			.filter(function (d, i, list) {
+				return i === list.length - 1;
+			})
+			.selectAll("g")
+			.append("text")
+			.text((d) => d.name)
+			.attr("text-anchor", "middle")
+			.attr("stroke", "#51c5cf")
+			.attr("stroke-width", "0px")
+			.attr("font-size", "10");
 
 		// Add a drag behavior.
 		node.call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended));
@@ -70,6 +89,7 @@ export default function Graph() {
 				.attr("y2", (d) => d.target.y);
 
 			node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+			text.attr("x", (d) => d.x).attr("y", (d) => d.y);
 		});
 
 		// Reheat the simulation when drag starts, and fix the subject position.
