@@ -57,7 +57,9 @@ export default function Graph({ currentUser, selectedFamily }) {
 		}
 
 		// Specify the dimensions of the chart.
-		const width = window.innerWidth - 280; // Account for sidebar
+		// On mobile (width < 768px), sidebar is hidden, so use full width
+		const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+		const width = isMobile ? window.innerWidth : window.innerWidth - 280; // Account for sidebar on desktop
 		const height = window.innerHeight - 80; // Account for header
 
 		// Enhanced color scale for better visual distinction
