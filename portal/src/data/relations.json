@@ -2,13 +2,31 @@
 	"nodes": [
 		{"id": 1, "name": "Grand Father", "group": 1},
 		{"id": 2, "name": "Grand Mother", "group": 1},
-		{"id": 3, "name": "Uncle", "group": 2},
-		{"id": 4, "name": "Uncle Jr", "group": 2},
-		{"id": 5, "name": "Mom", "group": 2}
+		{"id": 3, "name": "Uncle", "group": 1},
+		{"id": 4, "name": "Uncle Jr", "group": 1},
+		{"id": 5, "name": "Mom", "group": 1},
+		{"id": 6, "name": "Dad", "group": 1},
+		{"id": 7, "name": "Me", "group": 1},
+		{"id": 8, "name": "Sister", "group": 1},
+		{"id": 9, "name": "Bob Smith", "group": 2},
+		{"id": 10, "name": "Alice Smith", "group": 2},
+		{"id": 11, "name": "Charlie Smith", "group": 2}
 	],
 	"links": [
-		{
-			"source": 1, "target": 2, "relationship": "Spouse", "value": 1
-		}
+		{"source": 1, "target": 2, "relationship": "Spouse", "value": 1},
+		{"source": 1, "target": 3, "relationship": "Parent", "value": 1},
+		{"source": 2, "target": 3, "relationship": "Parent", "value": 1},
+		{"source": 1, "target": 5, "relationship": "Parent", "value": 1},
+		{"source": 2, "target": 5, "relationship": "Parent", "value": 1},
+		{"source": 3, "target": 4, "relationship": "Parent", "value": 1},
+		{"source": 5, "target": 6, "relationship": "Spouse", "value": 1},
+		{"source": 5, "target": 7, "relationship": "Parent", "value": 1},
+		{"source": 6, "target": 7, "relationship": "Parent", "value": 1},
+		{"source": 5, "target": 8, "relationship": "Parent", "value": 1},
+		{"source": 6, "target": 8, "relationship": "Parent", "value": 1},
+		{"source": 7, "target": 8, "relationship": "Sibling", "value": 1},
+		{"source": 9, "target": 10, "relationship": "Spouse", "value": 1},
+		{"source": 9, "target": 11, "relationship": "Parent", "value": 1},
+		{"source": 10, "target": 11, "relationship": "Parent", "value": 1}
 	]
 }
