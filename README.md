@@ -56,7 +56,7 @@ Dynastry supports four primary relationship types that form the foundation of fa
 |------------------|-------------|---------|
 | **Spouse** | Marital relationship between two individuals | Grand Father ↔ Grand Mother |
 | **Parent** | Parent-child relationship (directional) | Mom → Me |
-| **Child** | Inverse of parent relationship | Me ← Mom |
+| **Child** | Inverse of parent relationship | Me → Mom |
 | **Sibling** | Brother/sister relationship | Me ↔ Sister |
 
 ### Family Group Filtering
