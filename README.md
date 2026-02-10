@@ -30,8 +30,74 @@ Get ready to leaf through your family history with a smile and uncover the roots
 ## Mission Statement:
 
 At Dynastry, our mission is to help families dig up their roots and sow the seeds for future generations. We believe every family has a unique story to tell, and our goal is to provide the tools and platform to make those stories come alive, one branch at a time. We’re rooting for you every step of the way!
+
 <br>
-<br>
+
+## Visual Overview: Family Tree Graph Structure
+
+Dynastry uses an interactive graph visualization to display family relationships. Here's how the graph looks with various family connections:
+
+### Complete Family Tree View
+The graph displays all family members across multiple families with their relationships clearly labeled:
+
+![Family Tree - All Families](https://github.com/user-attachments/assets/7d9bf743-6478-4a56-b1ab-3fdf4d08a9d4)
+
+**Key Visual Elements:**
+- **Nodes (Circles)**: Represent individual family members
+- **Edges (Lines)**: Represent relationships between members
+- **Labels**: Display the type of relationship (Spouse, Parent, Child, Sibling)
+- **Colors**: Distinguish between different family groups (Blue = Family 1, Orange = Family 2)
+
+### Relationship Types Supported
+
+Dynastry supports four primary relationship types that form the foundation of family trees:
+
+| Relationship Type | Description | Example |
+|------------------|-------------|---------|
+| **Spouse** | Marital relationship between two individuals | Grand Father ↔ Grand Mother |
+| **Parent** | Parent-child relationship (directional) | Mom → Me |
+| **Child** | Inverse of parent relationship | Me ← Mom |
+| **Sibling** | Brother/sister relationship | Me ↔ Sister |
+
+### Family Group Filtering
+Filter the view to show only specific families:
+
+![Family Tree - Family 1 Only](https://github.com/user-attachments/assets/4d10034a-1a15-4a44-bb0e-29a1929257b7)
+
+### Privacy Mode
+When logged in as a specific family member, the graph displays only directly related family members for enhanced privacy:
+
+![Family Tree - Privacy Mode](https://github.com/user-attachments/assets/5546b122-9153-470b-ad03-35b41605ca2a)
+
+**Privacy Features:**
+- Shows only the logged-in user and their direct relationships
+- Filters out unrelated family members
+- Maintains data security while allowing collaboration
+
+### Graph Structure Example
+
+Here's a simplified representation of how relationships are structured in the graph:
+
+```
+Grand Father ──(Spouse)── Grand Mother
+     │                         │
+     ├────────(Parent)──────────┤
+     │                         │
+   Uncle                      Mom ──(Spouse)── Dad
+     │                         │                 │
+     │                         ├────(Parent)─────┤
+     │                         │                 │
+  Uncle Jr                    Me ──(Sibling)── Sister
+```
+
+### Interactive Features
+
+The graph visualization includes:
+- **Drag & Drop**: Click and drag nodes to rearrange the layout
+- **Zoom & Pan**: Mouse wheel to zoom, click and drag background to pan
+- **Hover Effects**: Nodes enlarge on hover for better visibility
+- **Dynamic Layout**: Force-directed graph automatically organizes nodes for optimal viewing
+
 <br>
 
 ## Contribution:
