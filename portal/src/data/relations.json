@@ -1,0 +1,14 @@
+{
+	"nodes": [
+		{"id": 1, "name": "Grand Father", "group": 1},
+		{"id": 2, "name": "Grand Mother", "group": 1},
+		{"id": 3, "name": "Uncle", "group": 2},
+		{"id": 4, "name": "Uncle Jr", "group": 2},
+		{"id": 5, "name": "Mom", "group": 2}
+	],
+	"links": [
+		{
+			"source": 1, "target": 2, "relationship": "Spouse", "value": 1
+		}
+	]
+}

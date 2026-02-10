@@ -1,6 +1,6 @@
 "use client";
 import * as d3 from "d3";
-import data from "@/../public/data/relations.json";
+import data from "@/data/relations.json";
 
 import { useRef, useEffect } from "react";
 
